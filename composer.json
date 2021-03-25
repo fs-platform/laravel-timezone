@@ -1,0 +1,38 @@
+{
+    "name": "aron/laravel-timezone",
+    "description": "根绝国家code获取对应时区",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aron.Yao",
+            "email": "aron.yao@feisu.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ext-json": "*",
+        "php": "^7.4 || ^8.0",
+        "laravel/framework": "^8.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aron\\Timezone\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aron\\Timezone\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aron\\Timezone\\Provider\\TimezoneServiceProvider"
+            ],
+            "aliases": {
+                "Timezone": "Aron\\Timezone\\Facades\\Timezone"
+            }
+        }
+    }
+}
